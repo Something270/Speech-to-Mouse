@@ -12,6 +12,7 @@ def spech_detector():
     with speech_recognition.Microphone() as src:
         
         while True:
+            
             try:
                 audio = recognizer.adjust_for_ambient_noise(src)
                 print("\n\nThreshold Value After calibration:" + str(recognizer.energy_threshold))
